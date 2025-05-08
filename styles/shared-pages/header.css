@@ -192,6 +192,7 @@ li a:hover .bxl-twitter {
   .header-icons ul {
    position: absolute;
    left: 50%;
+    bottom: 0;
   transform: translateX(-50%);
   }
 
