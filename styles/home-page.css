@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap');
+
+/*======== ROOT ==========*/
+
+:root {
+  /*======== COLORS ==========*/
+
+ --bright-color: #ccd4dd;
+ --black-color:  #141e1d;
+ --secondary-color: #446063;
+ --white-color: white;
+
+ /*======== FONT AND typography ==========*/
+ /* .5rem = 8px | 1rem = 16px; */
+  --body-font: "Montserrat Alternates", sans-serif;
+  --biggest-font-size: 2rem;
+  --big-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*======== FONT weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+  /*======== END OF ROOT ==========*/
+  
+/*======== BODY STYLE ==========*/
+/* welcome tab */
+
+
+
+
+
+
+/*======== IMAGE STYLING ==========*/
+.profile__container {
+  margin-top: 10rem;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s ease-in-out;
+}
+
+
+.profile {
+  width: 300px;
+  height: 300px;
+  border-radius: 10%;
+  overflow: hidden;
+  position: absolute;
+  border: 4px solid var(--black-color);
+  box-shadow: 0 0 12px white;
+  transition: .4s ease-in-out;
+}
+
+.profile-con{
+  width: inherit;
+  height: inherit;
+  transition: .4s ease-in-out;
+}
+
+.profile:hover .profile__img {
+  transform: scale(1.1);
+}
+
+.profile__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.profile__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 37, 37, 0.227);
+}
+
+.clip {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px hsla(131, 87%, 9%, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(131, 87%, 9%, 0.8);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+  z-index: 1;
+}
+
+.clip i {
+  font-weight: bold;
+  color: var(--bright-color);
+}
+
+.profile:hover .clip {
+  transform: rotate(25deg);
+  box-shadow: 0 0 15px hsla(131, 100%, 51%, 0.8);
+  height: 35px;
+  width: 35px;
+}
+
+
+
+/* =========INFO STYLING========= */
+
+/* info data */
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  color: var(--white-color);
+  transition: .4s ease-in-out;
+  opacity: 0;
+}
+
+.info__open {
+  opacity: 1;
+}
+
+.info__name {
+  font-weight: var(--font-bold);
+}
+
+
+.info__description {
+  font-weight: var(--font-semi-bold);
+  font-size: var(--small-font-size);
+  margin-top: 3rem;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+}
+
+/* info social links */
+.info__button {
+  width: 40%;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-bold);
+  background: linear-gradient(to right, var(--secondary-color) 20% , var(--black-color));
+  box-shadow: 0 0 10px var(--white-color);
+  padding: 4px 20px;
+  border-radius: 15px;
+  margin-top: 10px;
+  color: var(--white-color);
+  border: 2px solid var(--black-color);
+  cursor: pointer;
+  transition: transform .4s;
+}
+
+.info__button:hover {
+  transform: scale(1.05);
+}
+
+.info__social {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  display: flex;
+  transition: .4s ease-in-out;
+}
+
+.info__social a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--black-color);
+  color: var(--white-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--big-font-size);
+  margin-right: 15px;
+  box-shadow: 0 0 12px hsl(131, 100%, 51%);
+  transition: .4s ease-in-out;
+}
+
+.info__social a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px hsla(131, 100%, 57%, 0.998);
+}

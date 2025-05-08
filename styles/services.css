@@ -1,0 +1,130 @@
+/*======== ROOT ==========*/
+
+:root {
+  /*======== COLORS ==========*/
+
+ --bright-color: #ccd4dd;
+ --black-color:  #141e1d;
+ --secondary-color: #446063;
+ --white-color: white;
+
+ /*======== FONT AND typography ==========*/
+ /* .5rem = 8px | 1rem = 16px; */
+  --body-font: "Montserrat Alternates", sans-serif;
+  --biggest-font-size: 2rem;
+  --big-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*======== FONT weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+  /*======== END OF ROOT ==========*/
+
+
+.introduction-tests {
+  text-align: center;
+  margin-top: 5rem;
+  color: var(--white-color);
+}
+
+.services-grid {
+  width: 50%;
+  display: grid;
+  padding: 20px 10px 45px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 5rem auto;
+}
+
+
+.services-grid .services-tab {
+  background: #101011;
+  width: auto;
+  height: auto;
+  min-height: 50px;
+  text-align: center;
+  padding: 20px 15px;
+  border: 2.5px solid rgba(255, 248, 248, 0.5);
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  cursor: text;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-tab:hover {
+  transform: translateY(-2px) scale(1.03); 
+  box-shadow: 0 10px 13px rgba(0, 0, 0, 0.1);
+  color: #fff; 
+  border: 1.5px solid rgba(53, 9, 247, 0.77);
+} 
+
+.services-tab:active {
+  cursor: none;
+}
+
+.services-tab:hover .service-icon{
+  border-color: rgba(245, 245, 245, 05);
+}
+
+.service-icon {
+  background: transparent;
+  border: none; 
+  padding: 25px;
+  border-radius: 50%;
+  width: 30px; 
+  height: 30px; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; 
+  font-size: 1.2rem; 
+  border: 2px solid var(--bright-color);
+  transition: 0.3s ease;
+}
+
+.service-icon:hover{
+  transform: translateY(-2px);
+}
+
+.service-icon i {
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+
+.service-name {
+  margin-top: 1.5rem;
+}
+
+.services-tab .service-name p {
+  position: relative;
+  font-size: 13px;
+  font-weight: var(--font-bold);
+  color: var(--white-color);
+  font-family: var(--body-font);
+}
+
+.services-tab .service-name p::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  height: 3px;
+  width: 40%; 
+  border: none;
+  background: rgba(15, 74, 251, 0.805); 
+  border-radius: 2px; 
+}
+
+@media (max-width: 650px) {
+  .services-grid {
+    width: 100%
+  }
+}

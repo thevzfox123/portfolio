@@ -1,0 +1,116 @@
+/* General explanation text */
+.explanation-text {
+  text-align: center;
+  margin-top: 5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: capitalize; 
+  font-size: 1.5em;
+  color: whitesmoke;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Main Section Container */
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px #00000099;
+  backdrop-filter: blur(2px);
+  width: 400px;
+  height: 300px;
+  margin: 5rem auto;
+}
+
+/* Grid Layout */
+.main {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+}
+
+/* Base styles for all icons */
+.main a {
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: 0.4s ease-in-out;
+  font-size: 35px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 20x 5px -1px rgba(255, 255, 255, 0.622)
+}
+
+/* Just scale on hover */
+.main a:hover {
+  transform: scale(1.06);
+}
+
+/* Now, style icons <i> inside each link */
+.instagram i {
+  color: #C13584;
+}
+.twitter i {
+  color: #1DA1F2;
+}
+.github i {
+  color: #333;
+}
+.discord i {
+  color: #7289DA;
+}
+
+/* Hover effects */
+.instagram:hover {
+  background: #C13584;
+}
+.instagram:hover i {
+  color: #fff;
+}
+
+.twitter:hover {
+  background: #1DA1F2;
+}
+.twitter:hover i {
+  color: #fff;
+}
+
+.github:hover {
+  background: #333;
+}
+.github:hover i {
+  color: #fff;
+}
+
+.discord:hover {
+  background: #7289DA;
+}
+.discord:hover i {
+  color: #fff;
+}
+
+
+/*now to add border radiuses*/
+
+.instagram{
+  border-radius: 90px 5px 5px 5px;
+}
+
+.twitter{
+  border-radius: 5px 90px 5px 5px;
+}
+
+.github{
+  border-radius: 5px 5px 5px 90px;
+}
+
+.discord{
+  border-radius: 5px 5px 90px 5px;
+}
