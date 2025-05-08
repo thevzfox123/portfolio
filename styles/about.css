@@ -32,18 +32,6 @@
   box-shadow: 0 0 12px var(--white-color);
   transition: transform .4s;
   transition: box-shadow .4s;
-  animation: bounce 3s ease-in-out infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-    opacity: .5;
-  }
 }
 
 .showcase__img__container:hover .showcase__img {
